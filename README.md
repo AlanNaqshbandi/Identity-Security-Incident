@@ -9,7 +9,7 @@ identity and access control.
 ## Problems Found
 | # | Problem | Root Cause |
 |---|---------|------------|
-| 1 | Service principal had Owner at subscription scope | Web app SP only needs to read one Key Vault secret — Owner = full admin over entire subscription |
+| 1 | Service principal had Owner at subscription scope | Web app Service Principle only needs to read one Key Vault secret — Owner = full admin over entire subscription |
 | 2 | Key Vault had no RBAC, open network, weak soft delete | Legacy Access Policies + Allow network default + 7-day retention — compliance violation |
 | 3 | Conditional Access MFA policy in Report-only mode | Policy existed but was not enforcing — nobody required to complete MFA |
 
